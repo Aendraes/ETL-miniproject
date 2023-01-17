@@ -1,0 +1,11 @@
+Name,Diameter,Climate,Terrain,Surface Water,Population
+Tatooine,10465,arid,desert,1,200000
+Alderaan,12500,temperate,"grasslands, mountains",40,2000000000
+Yavin IV,10200,"temperate, tropical","jungle, rainforests",8,1000
+Hoth,7200,frozen,"tundra, ice caves, mountain ranges",100,unknown
+Dagobah,8900,murky,"swamp, jungles",8,unknown
+Bespin,118000,temperate,gas giant,0,6000000
+Endor,4900,temperate,"forests, mountains, lakes",8,30000000
+Naboo,12120,temperate,"grassy hills, swamps, forests, mountains",12,4500000000
+Coruscant,12240,temperate,"cityscape, mountains",unknown,1000000000000
+Kamino,19720,temperate,ocean,100,1000000000

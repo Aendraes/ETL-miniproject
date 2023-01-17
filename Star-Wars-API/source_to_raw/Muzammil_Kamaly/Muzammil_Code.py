@@ -15,7 +15,7 @@ for planet in data['results']:
 # Convert list to DataFrame
 df = pd.DataFrame(planets, columns=['Name', 'Diameter', 'Climate', 'Terrain', 'Surface Water', 'Population'])
 
-# Print table
+# Print table ni
 print(df)
 
 # Export to CSV
