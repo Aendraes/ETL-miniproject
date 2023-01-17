@@ -1,14 +1,22 @@
-import pandas
 import requests
+import pandas as pd
 
-#Does this work?
-
-
-#Url = http://swapi.dev/api/planets
-
-response = requests.get("http://swapi.dev/api/planets")
-
-# Convert the response data to a JSON object
+# Make API request
+response = requests.get("http://swapi.dev/api/planets/")
 data = response.json()
 
-print(data)
+# Initialize empty list
+planets = []
+
+# Append data to list
+for planet in data['results']:
+    planets.append([planet['name'], planet['diameter'], planet['climate'], planet['terrain'], planet['surface_water'], planet['population']])
+
+# Convert list to DataFrame
+df = pd.DataFrame(planets, columns=['Name', 'Diameter', 'Climate', 'Terrain', 'Surface Water', 'Population'])
+
+# Print table
+print(df)
+
+# Export to CSV
+df.to_csv('planets.csv', index=False)
