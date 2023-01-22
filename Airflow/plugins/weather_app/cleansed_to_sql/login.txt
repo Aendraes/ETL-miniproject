@@ -1,0 +1,7 @@
+{
+    "password": "password",
+    "user":"admin",
+    "host": "postgres-app",
+    "port": 5432,
+    "database": "weather_data"
+}
