@@ -2,10 +2,7 @@ from airflow.models import DAG
 from airflow.utils.dates import days_ago
 from airflow.operators.python_operator import PythonOperator
 
-
-# Import python files as modules
 # Import plugins.weather_app.source_to_raw as source_to_raw
-
 from weather_app.source_to_raw.source_to_raw import get_raw_data_items
 from weather_app.raw_to_harmonized.raw_to_harmonized import harmonize_data_files
 from weather_app.harmonized_to_cleansed.harmonized_to_cleansed import data_file_cleaned
