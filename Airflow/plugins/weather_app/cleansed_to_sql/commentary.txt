@@ -1,0 +1,33 @@
+#----------------------Documenation 
+# Goal: Uploading the Data from Json file in to a SQL-Daatabase 
+# 1. 
+# 2.
+# 3.
+# 4.
+# 5. 
+
+
+# Add time dataframe to database Y m d h
+# Divide cities into larger portions
+# Move units to another dataframe and insert as sql-table
+
+
+    # Take from Sql Datae base "Time" and convert them in to year, month,day, time etc
+    #Choosing the Column and Table 
+    #df[['date', 'month', 'year']] = df['time'].str.split("-", expand=True)
+
+
+
+
+"""                                       ------------------------------THOUGHT PROCESS---------------------------
+engine = create_engine("sqlite:///myexample.db")  # Access the DB Engine
+if not engine.dialect.has_table(engine, Variable_tableName):  # If table don't exist, Create.
+    metadata = MetaData(engine)
+    # Create a table with the appropriate Columns
+    Table(Variable_tableName, metadata,
+          Column('Id', Integer, primary_key=True, nullable=False), 
+          Column('Date', Date), Column('Country', String),
+          Column('Brand', String), Column('Price', Float),
+    # Implement the creation
+    metadata.create_all()
+"""

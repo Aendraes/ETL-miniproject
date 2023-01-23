@@ -1,0 +1,86 @@
+
+
+
+
+    #----- Documentation 
+    # 1. Get data normalized by "timeSeries"
+    # 2. Change values from list to int/float type
+    # 3. Reorganized the data we want to use, parameter_value, parameter_unit, time into a dictionary of lists for easy use in a pandas dataframe.
+    # 4. Wrote all the files to corresponding datetime values.
+    # 5. Added a file 'raw data transformed.txt' Which contains information on whether the raw data already exists in a file.
+    # 6. 
+    # 7. Cleaning the code to look more presentable
+# Change source_to_raw to include timestamp in filename
+# Change raw_to_harmonized to include timestamp in filename AND include a file called 'harmonized_fiĺes.txt' Where we log which files have already been harmonized.
+
+# TODO
+# Change Date format from string
+# Change Homeworld column to INT instead of float
+
+
+
+"""
+------------------------------------------------- Thought Proccess-----------------------------------------  
+
+            # {"values":valuelista,
+            # "names":namelista,
+            # "unittype":unitlista
+            # "timelista":timestamp}
+                    
+            # Vi vill göra så att timestamp och parameters är värden i samma dictionary istället. df.columns = parameters, timestamp, index
+            #exdf = pd.DataFrame(js)
+            # Column 1 - validTime, Column 2 - parameters [list -> dict]
+            #exdf = exdf[["parameters"][0]]
+            #exdf = pd.json_normalize(exdf)
+            #print(exdf)
+            # pd.json_normalize(exdf,'parameters')
+            #  print(exdf)
+
+
+                #unit_df = pd.DataFrame(harmonized_unit_dict)
+                #print(len(unit_df))
+
+            # harmonized_dict[]
+            # valuelist.append[item["values"]]
+            # unitlist.append[item["unit"]]
+            # namelist.append[item["name"]]
+            # Combine the two dictionaries into one
+
+
+            # for dictitem in js:
+            #     df = pd.DataFrame()
+                # df["Timestamp"] = dictitem["validTime"]
+                # for item in dictitem["parameters"]:
+                #     # df["Name"] = dictitem["name"]
+                #     # df["Level"] = dictitem["level"]
+                #     # df[item["name"] + "_values"] = item["values"]
+                #     # df[item["name"] + "_unit"] = item["unit"]
+
+                #     df = df[['value','unit']]
+
+                #     pd.concat
+                #     df.append({"name"+"_values":item["values"]}, ignore_index=True)
+                #     df.append({"name"+"_unit":item["unit"]}, ignore_index=True)
+            # print(df)
+
+            # print(df)                
+            # print(json.dumps(js,indent=3))
+
+            # df.to_json(HARMONIZEDPATH + file, orient='records', indent=3)
+
+            # Create a log of cities 
+            def create_log_file(filename):
+                if not os.path.exists(SQLPATH + 'city-log.txt'):
+                        with open(SQLPATH + 'city-log.txt', 'w') as fh:
+                            fh.write('{}') #Nuvarande variant fungerar.
+                else:
+                    with open(SQLPATH+'city-log.txt', 'r') as fh:
+                        citydict = eval(fh.read())
+                        city = re.findall(r'[a-öA-Ö]+', filename)[0]
+                        if city not in citydict.keys():
+                            citydict[city] = len(citydict) + 1
+                            with open(SQLPATH + 'city-log.txt', 'w') as f:
+                            f.write(json.dumps(citydict, indent = 4))
+
+
+"""

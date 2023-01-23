@@ -1,0 +1,8 @@
+
+# ------------Documentation
+# 1. Valt ut städer att undersöka
+# 2. Hitta rätt endpoint
+# 3. Kör en test-request
+# 4. Skriv till json-fil <city>.json i /data/testing/raw
+# 5. Refaktorering
+# 6. Loopar genom citydict

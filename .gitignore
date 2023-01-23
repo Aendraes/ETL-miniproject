@@ -1,0 +1,8 @@
+*.json
+__pycache__/
+logs/
+data_transformed.txt
+raw_data_transformed.txt
+files_posted_to_database.txt
+city-log.txt
+*.log
