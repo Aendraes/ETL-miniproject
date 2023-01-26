@@ -29,7 +29,7 @@ def extract_desired_columns(df):
     Input: Pandas DataFrame
     Output: Pandas DataFrame with the columns:
    "msl", "t", "r", "ws" and "wsymb2" for weather description."""
-    df = df[["msl_value","t_value","ws_value", "r_value","wsymb2_value"]]
+    df = df[["msl_value","t_value", "ws_value","r_value","wsymb2_value"]]
     df.columns = ["air_pressure","temperature","wind_speed","humidity","description_index"]
     return df
 
