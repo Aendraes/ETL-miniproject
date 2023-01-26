@@ -1,0 +1,7 @@
+{
+    "password": "password",
+    "user":"admin",
+    "host": "localhost",
+    "port": 5435,
+    "database": "weather_data"
+}

@@ -41,6 +41,8 @@ CLEANEDPATH = ROOTPATH + '/data/testing/cleaned/'
 SQLPATH = ROOTPATH + '/cleansed_to_sql/'
 with open(os.path.dirname(__file__) + '/login.txt', 'r') as f:
     params = eval(f.read())
+params["host"]="localhost"
+params["port"]=5435
 enginestring = f"""postgresql://{params["user"]}:{params["password"]}@{params["host"]}:{params["port"]}/{params["database"]}"""
 engine = sqlalchemy.create_engine(enginestring)
 
